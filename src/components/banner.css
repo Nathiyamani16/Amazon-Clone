@@ -1,0 +1,129 @@
+/* .banner{
+//   height: 300px;
+//   width: 100%;
+//   position: relative;
+//   img{
+//     position: absolute;
+//     width: 100%;
+//     height: auto;
+//     top: 0;
+//   }
+// }
+// .banner {
+//   position: relative;
+//   width: 100%;
+//   overflow: hidden;
+
+//   .sample-container {
+//     display: flex;
+//     transition: transform 0.5s ease; /* Animation duration and easing *   }
+
+//   .sample-container img {
+//     width: 100%;
+//     height: auto;
+//   }
+
+//   .scroll-button {
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     background: transparent;
+//     border: none;
+//     font-size: 24px;
+//     cursor: pointer;
+
+     &.left {
+       left: 10px;
+     }
+
+     &.right {
+       right: 10px;
+     }
+   }
+ }*/
+/*.banner {
+  height: 300px;
+    width: 100%;
+    position: relative;
+    img1{
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 0;
+    }
+    img2{
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 0;
+    }
+  }
+
+  .sample-container {
+    display: flex;
+    transition: transform 0.5s ease; /* Animation duration and easing 
+  }
+
+  .sample-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+  }*/
+  .banner {
+    height: 300px;
+       width: 100%;
+       position: relative;
+  }
+  
+  .sample-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .sample-container img {
+    width: 100%;
+    height: auto;
+    /* Adjust how images fit within their containers */
+  }
+  
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1; /* Ensure buttons appear above images */
+  
+    &.left {
+      left: 10px;
+    }
+  
+    &.right {
+      right: 10px;
+    }
+  }
+  
+  
+  
+
+
+
