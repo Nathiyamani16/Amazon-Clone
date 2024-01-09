@@ -1,4 +1,5 @@
-.productList{
+/*Product List
+.productList {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -7,93 +8,250 @@
   padding: 1rem;
   background: linear-gradient(0deg, #ccc 85%, transparent);
 
-  &::after{
+  &::after {
     display: block;
     content: "";
     clear: both;
   }
-  .card{
-    width: 300px;
+
+  .card {
+    width: 200px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     margin: 15px;
-    display: inline-block; /* Display cards inline */
-    text-align: center; 
+    display: inline-block;
+    text-align: center;
     background-color: #ddd;
   }
 
-  .imageHolder{
+
+  .imageHolder {
     text-align: center;
     position: relative;
-    >img{
+
+    > img {
       width: auto;
       max-height: 250px;
       object-fit: contain;
     }
-    button{
-      padding: 5px;
+
+    button {
+      padding: 5px 10px;
       background-color: #ff9f00;
       border: 1px solid;
-      padding: 5px 10px;
       cursor: pointer;
     }
   }
-}
-.productList1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  padding: 1rem;
-  background: linear-gradient(0deg, #ccc 85%, transparent);
+
+ 
+  .imageHolder1 {
+    text-align: center;
+    position: relative;
+  }
+
+
+  .imageHolder1 img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 100px;
+    position: absolute;
+  }
+
+  .topRight {
+    top: 0;
+    right: 0;
+  }
+
+  .topLeft {
+    top: 0;
+    left: 0;
+  }
+
+  .bottomRight {
+    bottom: 0;
+    right: 0;
+  }
+
+  .bottomLeft {
+    bottom: 0;
+    left: 0;
+  }
+
+
+  .title1 {
+ 
+  }
+
+  .subtitle {
+
+  }
+
+  button1 {
+  
+  }
+
+  .card-continer {
+    padding: 20px;
+  }
+
+  .product-card-nested {
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .product {
+
+    background-color: #ff9f00;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 200px;
+  }
+
+  .product h2 {
+    margin: 0;
+  }
+
+  .card-nested img {
+  
+    max-width: 200px;
+    height: 102px;
+    object-fit: cover;
+  }
 }
 
-.card1 {
-  width: 200px; 
-  border: 2px solid #ddd;
+.card {
+  width: 200px;
+  border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  position: relative; 
+}
+
+.card .product-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card .textHolder {
+  position: absolute;
+  bottom: 10px;
+  right: 10px; 
+}
+
+
+.card .textHolder button {
+  padding: 5px 10px;
+  background-color: #ff9f00;
+  border: 1px solid;
+  cursor: pointer;
+}
+*/
+/* Styling for individual cards */
+/* Your existing CSS styles */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1px;
+}
+.card:first-child {
+  margin-right: 5px; /* Reduce space to the right of the first card */
+}
+
+.card:nth-child(2) {
+  margin-left: 5px; /* Reduce space to the left of the second card */
+}
+
+/* Your other existing styles */
+
+
+.card {
+  /* Your card styles */
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px hsl(0, 0%, 24%);
+  margin: 15px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: #ffffff;
 }
 
-.imageHolder1 {
+/* Other styles for your cards */
+
+/* Add styles for the heading */
+.productList h2 {
   text-align: center;
-  position: relative;
+  font-size: 15px;
+}
+.product-card-nested {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px; /* Adjust spacing */
 }
 
-.imageHolder1 img {
+.card-nested {
+  width: calc(50% - 5px); /* Adjust width and consider padding */
+  text-align: center;
+  margin: 0 auto; /* Center the card-nested */
+}
+
+/* Styling for images */
+.product-image {
+  width: 100%;
   max-width: 100%;
-  height: auto;
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
-  max-height: 100px; 
+  margin: 10px 0; /* Add margin between images */
+
+}
+
+/* Reduced text size */
+.card-nested p {
+  font-size: 14px; /* Adjust the font size */
+}
+
+/* Additional styles for the button */
+/* .textHolder {
+  text-align: center;
+  margin-top: auto;
+  padding: 5px;
+} */
+
+.textHolder button {
+  padding: 8px 12px; /* Adjust button padding */
+  background-color: #ff9f00;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 14px; /* Adjust the font size */
+}
+
+/* Your existing CSS styles */
 
 .textHolder {
-  padding: 8px;
   text-align: center;
+  margin-top: auto;
+  padding: 5px;
 }
 
-.title1 {
-  font-size: 14px; 
-  font-weight: bold;
-  margin-bottom: 4px; 
-
-.subtitle {
-  font-size: 12px; 
-  color: #666;
+.textHolder .explore-more-link {
+  margin: 10px 0;
+  color: #333; /* Link color */
+  font-size: 14px; /* Adjust font size */
+  text-decoration: none; 
+  /* Remove underline */
+  text-align: left;
 }
 
-button1 {
-  padding: 4px 8px; 
-  background-color: #ff9f00;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 12px; }
-
-}
-}
