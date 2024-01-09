@@ -1,33 +1,90 @@
-/* ScrollableProductImages.css */
+/* scrollableProduct.css */
 
+/* Style for the container holding the scrollable card */
 .scrollable-card {
-    width: 300px;
-    height: 200px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .image-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .image-scroll {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 5px;
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #888 #f5f5f5; /* For Firefox */
-  }
-  
-  .product-image {
-    min-width: 100px;
-    height: 100%;
-    margin-right: 5px;
-    object-fit: cover;
-    border-radius: 5px;
-  } 
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: 5px solid #ddd;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px hsl(0, 0%, 24%);
+  display: flex;
+  flex-direction: column;
+  margin: 15px 5px;
+  border-radius: 15px; /* Adjust the border-radius for curved corners */
+}
+
+
+/* Container for the images */
+.image-container {
+  width: 100%; /* Adjust width according to padding and border */
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  border: 30px solid #ffffff; /* Border for the image container */
+  border-radius: 8px; /* Rounded corners for the container */
+  padding: 5px; /* Padding inside the container */
+}
+
+
+.image-scroll {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+.product-image {
+  width: calc(25% - 10px); /* Adjust width to display 4 images at once */
+  min-width: 100px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 10px; /* Adjust the margin between images */
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.image-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+
+/* Style for individual images */
+.product-image {
+  width: 20%;
+  min-width: 100px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 2%;
+  border-radius: 6px; /* Rounded corners for images */
+}
+
+
+.left-icon,
+.right-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  z-index: 5;
+  transition: color 0.3s ease; /* Smooth transition on hover */
+  padding: 30px; /* Adjust padding for space */
+}
+
+.left-icon {
+  left: 0;
+}
+
+.right-icon {
+  right: 0;
+}
+
+/* Styles for the icons on hover */
+.left-icon:hover,
+.right-icon:hover {
+  color: #000; /* Change text color on hover */
+}
+
+

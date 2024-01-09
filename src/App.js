@@ -17,7 +17,7 @@ function App() {
         <Banner />
         <ProductList />
         <Routes>
-          <Route path="/ScrollableProductImages" element={<ScrollableProductImages />} />
+          <Route path="/" element={<ScrollableProductImages />} />
         </Routes>
     
         <FootTwo />
