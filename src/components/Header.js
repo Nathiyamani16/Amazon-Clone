@@ -1,5 +1,6 @@
 import React from "react"
-import './header.scss';
+import '../scss/header.scss';
+import Logo from "../img/Re-Mastered.png"
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
@@ -9,7 +10,7 @@ const Header = () => {
     <header className="header">
       <div className="header__logo">
         <AddBusinessIcon fontSize="large"/>&nbsp;
-        <span className="header__logoName">NexGenSource</span>
+        <img src={Logo} className="Logo" alt="Logo Image" />
       </div>
       <div className="header__search">
         <input />

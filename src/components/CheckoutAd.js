@@ -1,4 +1,4 @@
-import './checkoutAd.scss';
+import '../scss/checkoutAd.scss';
 
 const CheckoutAd = () => {
   return(

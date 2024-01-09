@@ -1,4 +1,4 @@
-import './shoppingBasket.css';
+import '../css/shoppingBasket.css';
 
 const ShoppingBasket = () => {
   return(

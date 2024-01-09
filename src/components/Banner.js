@@ -49,7 +49,7 @@
 
 // export default Banner;
 import React, { useRef, useState } from 'react';
-import './banner.css'; // Make sure this CSS file is correctly linked
+import '../css/banner.css'; // Make sure this CSS file is correctly linked
 import image1 from "../img/1.jpg";
 import image2 from "../img/2.jpg";
 import image3 from "../img/3.jpg";
